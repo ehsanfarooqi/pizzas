@@ -2,11 +2,9 @@ import { formatCurrency } from "../../utils/helpers";
 import Button from "../../ui/Button";
 import { useDispatch } from "react-redux";
 import { addItem } from "../cart/cartSlice";
-import { useNavigate } from "react-router-dom";
 
 function MenuItem({ pizza }) {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
@@ -20,7 +18,6 @@ function MenuItem({ pizza }) {
     };
 
     dispatch(addItem(newItem));
-    navigate("/cart");
   }
   return (
     <li className="flex gap-4 py-2">
