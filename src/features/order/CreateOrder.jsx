@@ -24,7 +24,7 @@ function CreateOrder() {
 
   const dispatch = useDispatch();
   const {
-    username,
+    userName,
     status: addressStatus,
     position,
     address,
@@ -51,7 +51,7 @@ function CreateOrder() {
             className="input grow"
             type="text"
             name="customer"
-            defaultValue={username}
+            defaultValue={userName}
             required
           />
         </div>
